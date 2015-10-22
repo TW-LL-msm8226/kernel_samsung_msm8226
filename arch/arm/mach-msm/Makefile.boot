@@ -329,7 +329,6 @@ endif
 #        dtb-$(CONFIG_ARCH_MSM8226)	+= apq8026-v2-mtp.dtb
 #	 dtb-$(CONFIG_ARCH_MSM8226)	+= apq8026-v2-720p-mtp.dtb
 #	 dtb-$(CONFIG_ARCH_MSM8226)	+= apq8026-v2-1080p-mtp.dtb
-	 dtb-$(CONFIG_ARCH_MSM8226)	+= msm8226-v1-mtp-r01.dtb
 ifeq ($(CONFIG_MACH_MILLET3G_CHN_OPEN),y)
          dtb-$(CONFIG_ARCH_MSM8226)	+= msm8226-sec-millet3g-chn-open-r00.dtb
 else ifeq ($(CONFIG_MACH_MILLET3G_EUR),y)
@@ -454,12 +453,20 @@ else ifeq ($(CONFIG_MACH_VICTOR3GDSDTV_LTN),y)
 else ifeq ($(CONFIG_MACH_S3VE3G_EUR),y)
 	 dtb-$(CONFIG_ARCH_MSM8226)	+= msm8226-sec-s3ve3geur-r04.dtb
 else ifeq ($(CONFIG_MACH_MS01_EUR_3G),y)
-                dtb-$(CONFIG_ARCH_MSM8226)      += msm8226-sec-ms013geur-r00.dtb
-                dtb-$(CONFIG_ARCH_MSM8226)      += msm8226-sec-ms013geur-r01.dtb
-                dtb-$(CONFIG_ARCH_MSM8226)      += msm8226-sec-ms013geur-r02.dtb
-                dtb-$(CONFIG_ARCH_MSM8226)      += msm8226-sec-ms013geur-r03.dtb
-                dtb-$(CONFIG_ARCH_MSM8226)      += msm8226-sec-ms013geur-r04.dtb
-                dtb-$(CONFIG_ARCH_MSM8226)      += msm8226-sec-ms013geur-r05.dtb
+	 dtb-$(CONFIG_ARCH_MSM8226)	 += msm8226-v1-mtp-r01.dtb
+         dtb-$(CONFIG_ARCH_MSM8226)      += msm8226-sec-ms013geur-r00.dtb
+         dtb-$(CONFIG_ARCH_MSM8226)      += msm8226-sec-ms013geur-r01.dtb
+         dtb-$(CONFIG_ARCH_MSM8226)      += msm8226-sec-ms013geur-r02.dtb
+         dtb-$(CONFIG_ARCH_MSM8226)      += msm8226-sec-ms013geur-r03.dtb
+         dtb-$(CONFIG_ARCH_MSM8226)      += msm8226-sec-ms013geur-r04.dtb
+         dtb-$(CONFIG_ARCH_MSM8226)      += msm8226-sec-ms013geur-r05.dtb
+else ifeq ($(CONFIG_MACH_MS01_EUR_LTE),y)
+	 dtb-$(CONFIG_ARCH_MSM8226)	 += msm8226-v1-mtp-r01.dtb
+	 dtb-$(CONFIG_ARCH_MSM8226)      += msm8926-sec-ms01lteeur-r00.dtb
+	 dtb-$(CONFIG_ARCH_MSM8226)      += msm8926-sec-ms01lteeur-r03.dtb
+	 dtb-$(CONFIG_ARCH_MSM8226)      += msm8926-sec-ms01lteeur-r05.dtb
+	 dtb-$(CONFIG_ARCH_MSM8226)      += msm8926-sec-ms01lteeur-r08.dtb
+	 dtb-$(CONFIG_ARCH_MSM8226)      += msm8926-sec-ms01lteeur-r09.dtb
 else ifeq ($(CONFIG_MACH_VICTORLTE_CMCC),y)
 	 dtb-$(CONFIG_ARCH_MSM8226)	+= msm8926-sec-victorltecmcc-r00.dtb
 else ifeq ($(CONFIG_MACH_VICTORLTE_CTC),y)
