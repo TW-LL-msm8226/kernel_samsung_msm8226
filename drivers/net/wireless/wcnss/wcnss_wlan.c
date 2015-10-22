@@ -881,7 +881,7 @@ void wcnss_pronto_log_debug_regs(void)
 }
 EXPORT_SYMBOL(wcnss_pronto_log_debug_regs);
 
-#ifdef CONFIG_WCNSS_REGISTER_DUMP_ON_BITE
+#ifdef CONFIG_WCNSS_IRIS_REGISTER_DUMP
 static void wcnss_log_iris_regs(void)
 {
 	int i;
@@ -897,7 +897,9 @@ static void wcnss_log_iris_regs(void)
 		pr_info("[0x%08x] : 0x%08x\n", regs_array[i], reg_val);
 	}
 }
+#endif
 
+#ifdef CONFIG_WCNSS_REGISTER_DUMP_ON_BITE
 void wcnss_log_debug_regs_on_bite(void)
 {
 	struct platform_device *pdev = wcnss_get_platform_device();
