@@ -924,7 +924,9 @@ void wcnss_log_debug_regs_on_bite(void)
 			wcnss_pronto_log_debug_regs();
 		} else {
 			pr_err("clock frequency is zero, cannot access PMU or other registers\n");
+#ifdef CONFIG_WCNSS_IRIS_REGISTER_DUMP
 			wcnss_log_iris_regs();
+#endif
 		}
 	}
 }
